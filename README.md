@@ -39,7 +39,7 @@ Example:
 </td></tr> </table>
 
 Note that there is no record in the right table for Foghorn, and there is no record in the left table for
-Porky. When we OUTER JOIN these two tables ON the character column, the missing data will be null. This is useful for finding rows where such a match does not exist, such as characters with no catchphrases, or catchphrases with no characters.
+Porky. When we OUTER JOIN these two tables ON the character column, the missing data will be null. This is useful for finding rows where such a match does not exist, such as species without catchphrases or catchphrases without species.
 
 ```SQL
 SELECT * FROM table_left
