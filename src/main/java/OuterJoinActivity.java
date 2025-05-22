@@ -27,11 +27,12 @@ import java.util.Set;
  * Example:
  *
  *  table_left                         table_right
- * | id | character |  species  |     | id | character |        catchphrase        |
- * ------------------------------     ----------------------------------------------
- * |1   |'Bugs'     |'Rabbit'   |     |1   |'Daffy'    |'Youuu're deththpicable!'  |
- * |2   |'Daffy'    |'Duck'     |     |2   |'Elmer'    |'I'm hunting wabbits.'     |
- * |3   |'Foghorn'  |'Chicken'  |     |3   |'Porky'    |'That's all folks!'        |
+ * | id | character |  species |      | id | character |        catchphrase       |
+ * -----------------------------     ----------------------------------------------
+ * |1   |'Bugs'     |'Rabbit'  |     |1   |'Bugs'     |'What's up, doc?'          |
+ * |2   |'Daffy'    |'Duck'    |     |2   |'Daffy'    |'Youuu're deththpicable!'  |
+ * |3   |'Foghorn'  |'Chicken' |     |3   |'Elmer'    |'I'm hunting wabbits.'     |
+ *                                   |4   |'Porky'    |'That's all folks!'        |
  *
  * Note that there is no record in the right table for Foghorn, and there is no record in the left table for
  * Porky. When we OUTER JOIN these two tables ON the character column, the missing data will be null.
@@ -47,10 +48,10 @@ import java.util.Set;
  * The output of the join would create the following result set.
  * |  id  | character |  species  |  id  | character |        catchphrase        |
  * -------------------------------------------------------------------------------
- * |1     |'Bugs'     |'Rabbit'   |1     |'Daffy'    |'Youuu're deththpicable!'  |
- * |2     |'Daffy'    |'Duck'     |2     |'Elmer'    |'I'm hunting wabbits.'     |
+ * |1     |'Bugs'     |'Rabbit'   |1     |'Bugs'     |'What's up, doc?'          |
+ * |2     |'Daffy'    |'Duck'     |2     |'Daffy'    |'Youuu're deththpicable!'  |
  * |3     |'Foghorn'  |'Chicken'  |null  |null       |null                       |
- * |null  |null       |null       |3     |'Porky'    |'That's all folks!'        |
+ * |null  |null       |null       |4     |'Porky'    |'That's all folks!'        |
  */
 
 public class OuterJoinActivity {
